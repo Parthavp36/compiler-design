@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	char a[100];
+	int i,c,c1;
+	printf("enter the identifier : ");
+	scanf("%[^\n]",&a);
+	if(a[0]>=32 && a[0]<=57 || a[0]==64)
+	printf("\ninvalid..........");
+	else{
+	for(i=0;a[i];i++){
+		if(a[i]>=95 && a[i]<=122)
+		c=1;
+		else
+		c1=1;
+	}
+	if(c==1 && c1!=1)
+	printf("it is valid.........");
+	else
+	printf("it is invalid..........");
+}
+}
