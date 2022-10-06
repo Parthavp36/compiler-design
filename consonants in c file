@@ -2,7 +2,7 @@
 int c=0;
 %}
 %%
-[aeiouAEIOU] {c++;}
+[0-9] {c++;}
 %%
 int yywrap(void){}
 int main(char argc[] ,char *argv[]){
