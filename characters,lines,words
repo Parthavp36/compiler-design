@@ -1,0 +1,23 @@
+%{
+int a=0;
+int b=0;
+int c=0;
+int d=0;
+%}
+
+%%
+[a-zA-Z] {b++;}
+[\n] {c++;}
+[ ] {d++;}
+%%
+
+int yywrap(void){}
+
+int main(char argc[],char *argv[]){
+yyin=fopen(argv[1],"r");
+yylex();
+printf("\nno of characters : %d",b);
+printf("\nno of lines : %d",c);
+printf("\nno of words : %d",d+1);
+fclose(yyin);
+}
