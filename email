@@ -2,7 +2,7 @@
 int c=0;
 %}
 %%
-([a-z][@][g][m][a][i][l][.][c][o][m]) {c=1;}
+[a-z]+@[a-z]+".com"|".in"|".edu" {c=1;}
 %%
 int yywrap(void){}
 int main()
