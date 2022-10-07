@@ -1,0 +1,12 @@
+%{
+%}
+%%
+[A-Z] {printf("%s",yytext);}
+. {}
+%%
+int yywrap(void){}
+int main()
+{
+printf("\nenter the string : ");
+yylex();
+}
